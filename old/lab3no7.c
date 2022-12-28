@@ -1,15 +1,24 @@
 #include<stdio.h>
 int main(){
-    int var1,var2;
-    int i = 2;
+    int var1,var2,temp;
     scanf("%d %d",&var1,&var2);
-    while (1)
+    if (var1>=var2)
     {
-        if (var1%i == 0 && var2%i == 0){
+        temp  = var1;
+        var1 = var2;
+        var2 =temp;
+    }
+    if (var1 == 0){
+        printf("%d",var1);
+    }
+    else{
+    for(int i =var2;i>2;i--)
+    {
+        if (((var1%i) == 0) && ((var2%i) == 0)){
             printf("%d",i);
-            return 0;
+            break;
         }
-        i++;
+    }
     }
     return 0;
-}
+    }

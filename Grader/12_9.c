@@ -6,7 +6,7 @@ int main(){
     float powerBig = 0,powerSmall = 0;
     scanf("%d %d",&A,&B);
     scanf("%d %d",&M,&N);
-    if (((A==0)&&(M>=0)) && ((B==0) && (N>=0))){
+    if (((A==0)&&(M>A)) || ((B==0) && (N>B))){
         printf("Unable to finish order");
         return 0;
     }
